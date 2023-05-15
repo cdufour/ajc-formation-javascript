@@ -1,0 +1,5 @@
+*** Exos ***
+
+Exo1
+Au clic sur le bouton "Reset" on refait un cycle depuis la 
+première couleur du tableau ("red")

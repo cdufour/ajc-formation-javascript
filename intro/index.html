@@ -6,33 +6,56 @@
             button {
                 width: 100px
             }
+            #counter {
+               color: red 
+            }
         </style>
     </head>
 
     <body>
        <h1 style="color: orange">Introduction</h1>
-       <h1 style="color: orange">Introduction 2</h1>
-       <h1 style="color: orange">Introduction 3</h1>
        <button>Test</button>
        <button>Reset</button>
+       <p>Compteur de clics: <strong id="counter">0</strong></p>
 
        <script>
 
-        // ciblage du DOM
+        // ciblage du DOM avec variables associées
         var h1 = document.getElementsByTagName("h1")[0];
         //console.log(h1);
         var btn = document.getElementsByTagName("button")[0];
+        var btnReset = document.getElementsByTagName("button")[1];
+        var counter = document.getElementById("counter");
 
+        // autres variables
         var message = "click detected"; // string (chaînes de caractère)
-
-        var colors = ["red", "green", "blue"]; // tableau de chaînes
+        var colors = ["red", "green", "blue", "pink", "orange", "#44ffcc", "black"]; // tableau de chaînes
         var index = 0; // number
+        var nbClics = 0;
 
         // écoute événementielle
         btn.addEventListener("click", function() {
             console.log(message);
             h1.style.color = colors[index];
-            index = index + 1;
+            //index = index + 1;
+            index += 1; // incrémentation. Equivalent: index++
+
+            // dès qu'on sorti des limites du tableau, on entame un cycle
+            // en remettant l'index à 0
+            if (index == colors.length) {
+                index = 0;
+            }
+
+            nbClics++; // incrémentation de 1
+            counter.innerText = nbClics; // dom update
+
+        })
+
+        btnReset.addEventListener("click", function() {
+            h1.style.color = colors[0];
+            index = 1;
+            nbClics = 0;
+            counter.innerText = nbClics; // dom update
         })
 
        </script>
