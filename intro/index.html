@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction</title>
+        <style>
+            button {
+                width: 100px
+            }
+        </style>
+    </head>
+
+    <body>
+       <h1 style="color: orange">Introduction</h1>
+       <h1 style="color: orange">Introduction 2</h1>
+       <h1 style="color: orange">Introduction 3</h1>
+       <button>Test</button>
+       <button>Reset</button>
+
+       <script>
+
+        // ciblage du DOM
+        var h1 = document.getElementsByTagName("h1")[0];
+        //console.log(h1);
+        var btn = document.getElementsByTagName("button")[0];
+
+        var message = "click detected"; // string (chaînes de caractère)
+
+        var colors = ["red", "green", "blue"]; // tableau de chaînes
+        var index = 0; // number
+
+        // écoute événementielle
+        btn.addEventListener("click", function() {
+            console.log(message);
+            h1.style.color = colors[index];
+            index = index + 1;
+        })
+
+       </script>
+    </body>
+
+</html>
