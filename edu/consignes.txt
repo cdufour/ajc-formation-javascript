@@ -1,0 +1,8 @@
+*** TP edu ***
+Réaliser une application JavaScript en vous basant sur la capture edu-capture.png.
+
+L'utlisateur devra saisir le résultat des opérations proposées par l'interface web.
+Au clic sur le bouton "Corriger", les réponses attendues seront affichées.
+On affichera les bonnes réponses en vert et les mauvaises en rouge.
+
+En option, afficher le score. Exemple: 1/3
