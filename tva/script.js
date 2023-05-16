@@ -17,17 +17,32 @@ function onChange() {
     //console.log(ttc);
 
     // DOM update
-    spanTva.innerText = tva;
-    spanTtc.innerText = ttc;
+
+    // JavaScript Round to two Decimal Places
+    // https://www.stechies.com/javascript-round-two-decimal-places/#:~:text=toFixed()%20method%20to%20round,decimal%20place%20floating%2Dpoint%20numbers.
+    spanTva.innerText = tva.toFixed(2);
+    spanTtc.innerText = ttc.toFixed(2);
 }
 
 function onKeyup() {
+
+    // Si le champ de saisie du prix HT est vide
+    if (txtHt.value == "") {
+        // DOM update
+        spanTva.innerText = "";
+        spanTtc.innerText = "";
+        selectTax.value = 20; // taux par défaut
+    }
+
     var val = parseFloat(txtHt.value);
     console.log(val); // retour potentiel: NaN (Not a Number)
 
     if (isNaN(val)) {
+        // Not a Number
         selectTax.disabled = true;
     } else {
+        // Number
         selectTax.disabled = false;
+        onChange();
     }
 }
