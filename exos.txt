@@ -1,5 +1,10 @@
 *** Exos ***
 
-Exo1
+Exo1 - Projet intro
 Au clic sur le bouton "Reset" on refait un cycle depuis la 
 première couleur du tableau ("red")
+
+
+Exo2 - Projet Expand
+Ajouter dans l'interface utilisateur (UI) un bouton "Afficher tout".
+Le clic sur ce bouton devra afficher l'ensemble des articles
