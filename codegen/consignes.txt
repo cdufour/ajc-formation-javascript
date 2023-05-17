@@ -1,0 +1,9 @@
+*** TP codegen ***
+Réaliser une application JavaScript en vous basant sur la capture edu-capture.png.
+
+L'interface permettra de générer un code numérique de la longeur indiqué dans champ dédié.
+
+Option:
+- placer des lettres dans le code
+- rendre le bouton inactif (disabled) si le champ de saisie de longueur a une valeur non
+comprise entre 4 et 20
