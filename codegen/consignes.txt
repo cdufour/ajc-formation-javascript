@@ -1,7 +1,7 @@
 *** TP codegen ***
-Réaliser une application JavaScript en vous basant sur la capture edu-capture.png.
+Réaliser une application JavaScript en vous basant sur la capture codegencapture.png.
 
-L'interface permettra de générer un code numérique de la longeur indiqué dans champ dédié.
+L'interface permettra de générer un code numérique de la longeur indiquée dans champ dédié.
 
 Option:
 - placer des lettres dans le code
